@@ -13,11 +13,12 @@ body{
 .mainContainer{
 display: flex !important;
 flex-direction: column !important;
+justify-content: center;
+align-items: center;
 margin: 10px auto;
 padding: 10px;
 background-image: url('cal.png');
 background-repeat: no-repeat;
-height: 100vh;
 background-size: cover;
 border-radius: 10px;
 padding-bottom: 30px ;
