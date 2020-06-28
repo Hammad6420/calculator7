@@ -4,66 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATOR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <div class="calculatorTheme">
-
-            <div class="output">
+    <div class="mainContainer  container">
+    <div class="heading">
+      GCEP  CALCULATOR
+    </div>
+        <div class="calculatorTheme  col-lg-10 col-sm-10 col-md-10 col-12  ">
+            <div class="output col-lg-12 col-sm-12 col-md-12 col-12 ">
                 <div class="preceding" id="preceding"></div>
                 <div id="resultHead"></div>
                 <div class="inpOut" id="inpOut"></div>
             </div>
-<div class="buttonMain">
-    <button class="sym btn" onclick="percentage()">%</button>
-    <button class="sym btn" onclick="clearCE()">CE</button>
-    <button class="sym btn" onclick="clearC()">C</button>
-    <button class="sym btn" onclick="del()">
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="percentage()">% </button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="clearC()">CR</button>    
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="clearCE()">CE</button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="del()">
         <div class="del">
             x
         </div>
     </button>
 </div>
-<div class="buttonMain">
-    <button class="sym btn" onclick="perNo()">1/x</button>
-    <button class="sym btn" onclick="square()" ><sup>X<sup>2</sup> </button>
-    <button class="sym btn" onclick="sqareRoot()"><sup> X<sup>1\2</sup> </button>
-    <button class="sym btn" onclick="getsym('/')"  >/</button>
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="perNo()">1/x</button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="square()" ><sup>X<sup>2</sup> </button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="squareRoot()"><sup> X<sup>1\2</sup> </button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="getsym('/')"  >/</button>
 </div>
-<div class="buttonMain">
-    <button class="btn" onclick="getNo('7')">7</button>
-    <button class="btn" onclick="getNo('8')">8</button>
-    <button class="btn" onclick="getNo('9')">9</button>
-    <button class="sym btn" onclick="getsym('X')">X</button>
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="getNo('7')">7</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="getNo('8')">8</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="getNo('9')">9</button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3" onclick="getsym('X')">X</button>
 </div>
-<div class="buttonMain">
-    <button class="btn"onclick="getNo('4')">4</button>
-    <button class="btn"onclick="getNo('5')">5</button>
-    <button class="btn"onclick="getNo('6')">6</button>
-    <button class="sym btn"onclick="getsym('-')">--</button>
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('4')">4</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('5')">5</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('6')">6</button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getsym('-')">--</button>
 </div>
-<div class="buttonMain">
-    <button class="btn"onclick="getNo('1')">1</button>
-    <button class="btn"onclick="getNo('2')">2</button>
-    <button class="btn"onclick="getNo('3')">3</button>
-    <button class="sym btn"onclick="getsym('+')">+</button>
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('1')">1</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('2')">2</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('3')">3</button>
+    <button class="sym btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getsym('+')">+</button>
 </div>
-<div class="buttonMain">
-    <button class="sym btn"onclick="multipleMinus()">+/-</button>
-    <button class="btn"onclick="getNo('0')">0</button>
-    <button class="btn"onclick="getNo('.')">.</button>
-    <button class="equal btn"onclick="getsym('=')">=</button>
+<div class="buttonMain col-lg-12 col-sm-12 col-md-12 col-12" >
+    <button class="sym col-lg-3 col-sm-3 col-md-3 col-3 btn"onclick="multipleMinus()">+/-</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('0')">0</button>
+    <button class="btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="getNo('.')">.</button>
+    <button class="equal btn col-lg-3 col-sm-3 col-md-3 col-3"onclick="equalTo()">=</button>
 </div>
-
-
-
-
-
 
         </div>
+
+        <div class="ref">
+            BY : HM
+          </div>
+
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </html>
