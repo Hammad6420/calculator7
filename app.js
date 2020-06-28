@@ -165,6 +165,9 @@ function clearC() {
     yy = c.join('');
     console.log(yy)
     document.getElementById('preceding').innerText = yy;
+        // dont show result
+        document.getElementById('resultHead').innerText = '';
+        stp=0;
 }
 
 

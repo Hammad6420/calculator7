@@ -11,30 +11,22 @@ body{
     margin: 30px !important;
 }
 .mainContainer{
-display: flex  !important;
-flex-direction: column !important;
-justify-content: center !important;
-align-items: center !important;
-margin: 10px auto !important;
+    box-sizing: border-box;
 padding: 10px !important;
 background-image: url('cal.png') !important;
-background-repeat: no-repeat !important;
 background-size: cover !important;
 border-radius: 10px !important;
-padding-bottom: 30px !important;
 }
 .calculatorTheme{
     opacity: 0.9 !important;
     background-color: rgb(240, 240, 240) !important;
-    padding:15px 2px 4px 2px !important;
+    padding:20px 10px 4px 2px !important;
     border: 1px solid black !important;
     border-radius: 10px !important;
     
 }
 .output{
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
+    padding:0px 10px 0px 10px !important;
 background-color: transparent !important;
 height: 150px;
 }
@@ -56,18 +48,17 @@ height: 150px;
     font-weight: 700 !important;
     font-size: 28px !important;
 background-color: transparent !important;
-    margin-bottom: 20px !important;
+margin-bottom: 20px !important;
     padding: 0px 8px 0px 8px !important;
+    box-sizing: border-box;
 }
 .buttonMain{
     display: flex !important;
-    align-items: center !important;
-    justify-content: space-around !important;
     padding: 0px 7px 0px 7px !important;
 }
 .btn{
     width: 100% !important;
-height: 55px !important;
+height: 45px !important;
 border: none !important;
 margin: 2px 2px !important;
 background-color: white !important;
@@ -116,7 +107,7 @@ transition: 0.1s !important;
         text-align: left !important;
     }
     .ref{
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 700;
         color: rgb(167, 166, 166);
         text-align: center;
