@@ -5,6 +5,7 @@ var num = []; number = 0; lastResult = 0; clearForNew = 0; delNew = 0;  dot=0;yy
 
 // Numbers
 function getNo(no) {
+  
     // dont show result
     document.getElementById('resultHead').innerText = '';
     // clear output
@@ -55,7 +56,7 @@ function getsym(sym) {
     if ((xx[xx.length - 1]) != '+' && (xx[xx.length - 1]) != '-' && (xx[xx.length - 1]) != '/' && (xx[xx.length - 1]) != '=' && (xx[xx.length - 1]) != 'X' ) {
         if (delNew == 0) {
             document.getElementById('inpOut').innerText = '';
-            document.getElementById('preceding').innerText +=number+sym;
+        document.getElementById('preceding').innerText +=number+sym;
         }
         }else{
             document.getElementById('preceding').innerText += document.getElementById('inpOut').innerText;
@@ -116,14 +117,20 @@ var stp=0;
 function equalTo() {
     clearForNew=0;
     stp=stp+1;
+    // error chec/\k
     err()
+
     xx=document.getElementById('preceding').innerText.split('');
-    if (stp==1 || (xx.endsWith('+') && xx.endsWith('-') && xx.endsWith('X') && xx.endsWith('/') )) {
-     
+
+    if (stp==1) {
     eq = document.getElementById('preceding').innerText;
     eqNo = document.getElementById('inpOut').innerText;
+    // // undefined
+    if (number=='NaN' ||  number=='NaN%' ||  number.endsWith('%') || number=='Infinity' || number=='undefined') {
+        eqNo='';
+        eq='';
+       }else{
             eq = document.getElementById('preceding').innerText += eqNo;
-            eqOld = eq;
             eq = eq.split('')
             for (let index = 0; index < eq.length; index++) {
                 if (eq[index] == 'X') {
@@ -133,10 +140,11 @@ function equalTo() {
             eq = eq.join('')
             console.log(eq)
             lastResult = document.getElementById('inpOut').innerText = eval(eq);
-            document.getElementById('preceding').innerText = eqOld;
+            document.getElementById('preceding').innerText = eq;
             document.getElementById('resultHead').innerText = 'RESULT';  
             number='';
             stp=0;
+        }
     }
     numOper=lastResult;
  
@@ -148,11 +156,18 @@ if(stp>0) {
 }
 // DELETE
 function del() {
-    var x = document.getElementById('inpOut').innerText.split('');
+    // // undefined
     console.log(x)
+    if (number=='NaN' ||  number=='NaN%'  || number=='Infinity' || number=='undefined') {
+        document.getElementById('preceding').innerText = "";
+        document.getElementById('resultHead').innerText = '';
+        document.getElementById('inpOut').innerText = '0';
+        x='';
+        number='';
+       }
+    var x = document.getElementById('inpOut').innerText.split('');
     x.pop();
     y = x.join('');
-    console.log(y)
     document.getElementById('inpOut').innerText = y;
     delNew = 1;
 }
@@ -161,11 +176,13 @@ function del() {
 // CLEAR ALL
 function clearCE() {
     document.getElementById('preceding').innerText = "";
-    document.getElementById('inpOut').innerText = '0';
-    num1 = 0; num2 = 0; lastResult = 0; number = 0; clearForNew = 0;numOper=0;
+    document.getElementById('inpOut').innerText = '0'; lastResult = 0;
+    document.getElementById('resultHead').innerText = ''; number = 0; clearForNew = 0;numOper=0;
+
 }
 // correction preceding
 function clearC() {
+    document.getElementById('inpOut').innerText = '';
     var c = document.getElementById('preceding').innerText.split('');
     console.log(x)
     c.pop();
@@ -175,6 +192,7 @@ function clearC() {
         // dont show result
         document.getElementById('resultHead').innerText = '';
         stp=0;
+
 }
 
 
