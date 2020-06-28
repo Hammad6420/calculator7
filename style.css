@@ -4,7 +4,7 @@ body{
     background-color: rgb(134, 133, 131);
 }
 .heading{
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 700;
     color: rgb(161, 158, 158);
     text-align: center;
@@ -13,11 +13,11 @@ body{
 .mainContainer{
 display: flex !important;
 flex-direction: column !important;
-align-items: center !important;
-justify-items: center !important;
-margin-top:90px ;
-background-image: url('cestudy.jpg');
+margin: 10px auto;
+padding: 10px;
+background-image: url('cal.png');
 background-repeat: no-repeat;
+height: 100vh;
 background-size: cover;
 border-radius: 10px;
 padding-bottom: 30px ;
@@ -115,9 +115,10 @@ transition: 0.1s !important;
         text-align: left !important;
     }
     .ref{
-        font-size: 25px;
+        font-size: 28px;
         font-weight: 700;
-        color: rgb(161, 159, 159);
+        color: rgb(167, 166, 166);
         text-align: center;
         margin: 25px;
     }
+    
