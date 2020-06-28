@@ -116,6 +116,7 @@ var stp=0;
 function equalTo() {
     clearForNew=0;
     stp=stp+1;
+    err()
     xx=document.getElementById('preceding').innerText.split('');
     if (stp==1 || (xx.endsWith('+') && xx.endsWith('-') && xx.endsWith('X') && xx.endsWith('/') )) {
      
@@ -135,10 +136,16 @@ function equalTo() {
             document.getElementById('preceding').innerText = eqOld;
             document.getElementById('resultHead').innerText = 'RESULT';  
             number='';
+            stp=0;
     }
     numOper=lastResult;
+ 
+}
+function err(){
+if(stp>0) {
+    document.getElementById('resultHead').innerText = 'SYNTAX ERROR';  
     }
-
+}
 // DELETE
 function del() {
     var x = document.getElementById('inpOut').innerText.split('');
